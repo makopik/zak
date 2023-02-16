@@ -1,0 +1,82 @@
+.grid {
+
+    /*подключаем сетку*/
+    display: grid;
+    /*формируем по 4 одинаковых строки и столбца*/
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 300px);
+    justify-content: center;
+    column-gap: 200px;
+   row-gap: 300px;
+  } 
+
+  /*внешний вид ячеек*/
+  .grid {
+    
+    border-radius: 5px;
+  
+    margin: 1px;
+  }
+
+  .grid img{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }
+.grid div{
+    height: 100%;
+}
+ .grid p{
+   
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .set{  margin-bottom:  300px;}
+
+
+
+    /*кнопка */
+.BUT{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 100px;
+  }
+  .BUT a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    
+  }
+  .BUT a:before,
+  .BUT a:after{
+    position: absolute;
+    content: "Подробнее";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .BUT a:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .BUT a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .BUT a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+  
